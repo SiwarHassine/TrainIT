@@ -1,0 +1,45 @@
+
+
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+       <a  class="logo d-flex align-items-center me-auto me-lg-0" >
+         <img   src="/assets/img/orange_logo.png"  loading="lazy" > 
+       </a>
+      <nav id="navbar" class="navbar">
+         <ul>
+             <li><a routerLink="/home" *ngIf="userRole === ''" >Home</a></li>
+             <li><a routerLink="/about" *ngIf="userRole === ''"  >About</a></li>
+             
+             <li><a routerLink="/contact" *ngIf="userRole === ''">Contact</a></li>
+             <li><a routerLink="" *ngIf="userRole === ''" >LogIn</a></li>
+             <li><a routerLink="/training" *ngIf="userRole === 'Manager'|| userRole === 'Trainer'"  >Trainings</a></li>
+             <li><a routerLink="/session" *ngIf="userRole === 'Manager'|| userRole === 'Trainer'"  >Sessions</a></li>
+
+         
+            <li class="profile dropdown"   *ngIf="userRole !== ''" >
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="/assets/img/profil.png" alt="Profile Picture">
+                     <span>{{ userName }} </span>         
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                   <li><a class="dropdown-item" href="/profil">Profil</a></li>
+                   <li><a class="dropdown-item" href="/collab"  *ngIf="userRole === 'Manager'" >My Collaborater</a></li>
+                   <li><a class="dropdown-item" href="/user"  *ngIf="userRole === 'Manager'" >All Collaborater</a></li>
+                   <li><a class="dropdown-item" href="/listAllSession"  *ngIf="userRole === 'Trainer'">All Open Sessions</a></li>
+                   <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                   <li><a class="dropdown-item" href="/settings">Settings</a></li>
+                   <li><hr class="dropdown-divider"></li>
+                   <li><a class="dropdown-item"  (click)="logout()">Logout</a></li>
+                </ul>
+            </li>
+            
+         </ul>
+      </nav>
+    
+   </div>
+
+
+   
+</header>
+
+

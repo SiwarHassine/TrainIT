@@ -1,0 +1,120 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin: 20px auto;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+table th {
+    background-color: #eee;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #fff;
+    color: #333;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+table tr:hover td {
+    background-color: #ddd;
+}
+
+.section-header p span {
+    color: #ff7900;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  button[type="button"] {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7900;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #ff7900;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #F5F5F5;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #FFF;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #999;
+    font-weight: normal;
+  }
+
+
+  
+.modal-dialog {
+    max-width: 800px;
+  }
+  
+  /* Center the modal horizontally */
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.5rem);
+  }

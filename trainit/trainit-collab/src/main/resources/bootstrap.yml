@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: collab
+  cloud:
+    config: 
+      uri: http://localhost:8888
+  #main:
+    #allow-bean-definition-overriding: true

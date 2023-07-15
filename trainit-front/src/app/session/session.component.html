@@ -1,0 +1,105 @@
+<section id="session" class="session">
+    <div class="container" data-aos="fade-up">
+       <div class="section-header">
+         <br>
+          <h2>Welcome</h2>
+          <p>See <span>Our Sessions</span></p>
+       </div>
+
+
+       
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+      
+          <th scope="col">name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allTrainingSession">
+          <td data-bs-target="#buttons" data-bs-toggle="modal" (click)="openFirstModal(item.id)">{{ item.name }}</td>
+         
+        
+        </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+ <!-- Modal button -->
+ <div class="modal fade" id="buttons" tabindex="-1" aria-labelledby="buttonsLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="buttonsLabel">Action</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div>
+            <button type="button" class="btn btn-primary me-2" data-bs-target="#edit" data-bs-toggle="modal"   (click)="openSecondModal()">Edit</button>
+            <button type="button" class="btn btn-primary me-2" class="btn btn-danger me-2" (click)="delete()" (click)="openSecondModal()" data-bs-dismiss="modal">Delete</button>
+            <button type="button" class="btn btn-primary me-2" data-bs-target="#subscribe" data-bs-toggle="modal" (click)="openSecondModal()" >Subscribe</button>
+
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Modal subscribe -->
+ <div class="modal fade" id="subscribe" tabindex="-1" aria-labelledby="subscribeLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="subscribeLabel">Subscribe for Training</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="name-input">Are you sure you want to subscribe to : {{trainingSessionForm.name}}</label>
+        </form>
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-primary me-2" (click)="subscribe()" data-bs-dismiss="modal">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Modal edit -->
+ <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editLabel">Edit Training</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="name-input">Enter the training name:</label>
+          <input type="text" id="name-input" name="name" required [(ngModel)]= "trainingSessionForm.name">
+        </form>
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-primary me-2" (click)="update()" data-bs-dismiss="modal">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

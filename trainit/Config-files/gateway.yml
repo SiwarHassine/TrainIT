@@ -1,0 +1,18 @@
+server:
+  port: 8089
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: assignment
+        uri: lb://assignment
+        predicates:
+          - Path=/assignment/**
+      - id: collab
+        uri: lb://collab
+        predicates:
+          - Path=/collab/**

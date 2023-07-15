@@ -1,0 +1,113 @@
+<section id="user" class="user">
+    <div class="container" data-aos="fade-up">
+       <div class="section-header">
+         <br>
+          <h2>Welcome</h2>
+          <p>See <span>All the Users</span></p>
+       </div>
+
+ <!-- Button trigger modal -->
+
+ <div class="button-container">
+  <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#create">
+    Add User
+  </button>
+</div>
+
+
+
+<div class="container">
+  <input type="text" class="form-control" placeholder="Search User" [(ngModel)]="searchText" (ngModelChange)="filterUsers()" />
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+        </tr>
+       
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allUsers">
+    
+          <td data-bs-target="#buttons" data-bs-toggle="modal" (click)="openFirstModal(item.id)">{{ item.name }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</section>
+
+
+
+ <!-- Modal create -->
+ <div class="modal fade" id="create" tabindex="-1" aria-labelledby="createLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="createLabel">Create New User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="name-input">Enter the user name:</label>
+          <input type="text" id="name-input" name="name" required [(ngModel)]= "userForm.name">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="create()" data-bs-dismiss="modal">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Modal button -->
+ <div class="modal fade" id="buttons" tabindex="-1" aria-labelledby="buttonsLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="buttonsLabel">Action</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div>
+            <button type="button" class="btn btn-primary me-2" data-bs-target="#edit" data-bs-toggle="modal"   (click)="openSecondModal()">Edit</button>
+            <button type="button" class="btn btn-primary me-2" class="btn btn-danger me-2" (click)="delete()" (click)="openSecondModal()" data-bs-dismiss="modal">Delete</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Modal edit -->
+ <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editLabel">Edit Training</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="name-input">Enter the training name:</label>
+          <input type="text" id="name-input" name="name" required [(ngModel)]= "userForm.name">
+        </form>
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-primary me-2" (click)="update()" data-bs-dismiss="modal">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

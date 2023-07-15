@@ -1,0 +1,141 @@
+
+
+<section>
+    <section>
+<div class="container">
+    <div class="main-body">
+    
+         
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+        
+              <div class="card">
+
+                <div class="card-body">
+                  <br>
+                  <br>
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <br>
+                      <h4>{{ userName }}</h4>
+                      <p class="text-muted font-size-sm">Sofrecom</p>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ userName }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ userName }}@sofrecom.com
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      (239) 816-9029
+                    </div>
+                  </div>
+                  <hr>
+                 
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Role</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ userRole }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Subscribe Sessions</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{s}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <button type="button" class="btn btn-primary " href="#">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+        </div>
+        <br>
+        <br>
+
+      </div>
+      <div class="pi">
+        <div class="card mb-3 mx-auto text-center">
+          <div class="card-body ">
+            <div class="row text-center">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Waiting Sessions</h6>
+              </div>
+              <div class="col-sm-3" >
+                <h6 class="mb-0">In Progress Sessions</h6>
+              </div>
+              <div class="col-sm-3">
+                <h6 class="mb-0">Done Sessions</h6>
+              </div>
+            </div>
+            <hr>
+            <div class="row text-center">
+              <div class="col-sm-3 text-center" >
+                <h6 class="mb-0">
+                  <div class="pie " style="--p:{{numWaiting}}">
+                    {{w}}
+                  </div>
+                </h6>
+              </div>
+              <div class="col-sm-3">
+                <h6 class="mb-0">
+                  <div class="pie  " style="--p:{{numProgress}};--c:rgb(247, 84, 20);">
+                    {{p}}
+                  </div>
+                </h6>
+              </div>
+              <div class="col-sm-3">
+                <h6 class="mb-0">
+                  <div class="pie " style="--p:{{numDone}};--c:rgb(0, 124, 37);">
+                    {{d}}
+                  </div>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+        </div>
+
+
+    </div>
+

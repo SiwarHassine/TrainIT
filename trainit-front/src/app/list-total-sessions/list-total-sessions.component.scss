@@ -1,0 +1,30 @@
+select {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #F5F5F5;
+    color: #666;
+    border: none;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  select option {
+    background-color: #FFFFFF !important;
+    color: #333;
+  }
+  
+  select.form-select option[value="Waiting"] {
+    background-color: #FFD700; /* gold */
+    color: #333;
+  }
+  
+  select.form-select option[value="In progress"] {
+    background-color: #00BFFF; /* deep sky blue */
+    color: #FFFFFF;
+  }
+  
+  select.form-select option[value="Done"] {
+    background-color: #32CD32; /* lime green */
+    color: #FFFFFF;
+  }
+  

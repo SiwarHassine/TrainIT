@@ -1,0 +1,11 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h3>Login</h3>
+      <form>
+          <input type="text" placeholder="Username" name="username" [(ngModel)]="model.name">
+          <input type="password" placeholder="Password" name="password"  [(ngModel)]= "model.password">
+        <input type="submit" (click)="loginUser()"  value="Log In">
+      </form>
+  
+    </div>
+  </div>
